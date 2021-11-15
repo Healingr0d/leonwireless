@@ -20,6 +20,11 @@
 
   <link rel="shortcut icon" href="assets/img/LOGOTIPO_vertical_degradado-01.png">
 
+  <script src="assets/js/jquery-3.2.1.js"></script>
+
+  <script src="assets/js/script.js"></script>
+
+
 </head>
 <body>
   <div class="back-to-top"></div>
@@ -78,28 +83,28 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form>
+                    <form method="post" action="correo.php">
                       <div class="form-group">
-                        <label for="recipient-name" class="col-form-label" >Nombre:</label>
-                        <input type="text" class="form-control" id="recipient-name" required="">
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="nombre" required>
                       </div>
                       <div class="form-group">
-                        <label for="recipient-name" class="col-form-label solo-numero" required="">Número:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <label for="recipient-name" class="col-form-label solo-numero">Número:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="numero" required>
                       </div>
                       <div class="form-group">
-                        <label for="recipient-name" class="col-form-label" required="">Correo electrónico:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <label for="recipient-name" class="col-form-label">Correo electrónico:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="correo" required>
                       </div>
                       <div class="form-group">
-                        <label for="message-text" class="col-form-label" required="">Mensaje:</label>
-                        <textarea class="form-control" id="message-text" placeholder="Por favor escribe tu mensaje en un momento te contactaremos..." ></textarea>
+                        <label for="message-text" class="col-form-label">Mensaje:</label>
+                        <textarea class="form-control" id="message-text" required="" name="mensaje" placeholder="Por favor escribe tu mensaje en un momento te contactaremos..." ></textarea>
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar Mensaje</button>
+                    <button type="button" class="btn btn-primary" value="Enviar Mensaje">Enviar Mensaje</button>
                   </div>
                 </div>
               </div>
@@ -394,7 +399,7 @@
           <form action="#">
             <h5>Contacto</h5>
           <p>Carretera Internacional 2 Sección San Pablo Huitzo, Etla, Oaxaca 68220.</p>
-          <a href="#" class="footer-link">951 169 73 46</a>
+          <a href="#" class="footer-link" data-l="tel:9511697346" onclick="if(FogLink){FogLink.open(this);}">951 169 73 46</a>
           <a href="#" class="footer-link">leonwirelesscontacto@gmail.com</a>
           </form>
         </div>
@@ -413,6 +418,6 @@
 <script src="assets/vendor/wow/wow.min.js"></script>
 
 <script src="assets/js/theme.js"></script>
-  
+
 </body>
 </html>
