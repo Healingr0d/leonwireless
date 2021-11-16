@@ -25,7 +25,7 @@ try {
     $mail->Username   = 'r0udgmtz@gmail.com';                     //SMTP username
     $mail->Password   = 'larosanegra13';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('r0udgmtz@gmail.com', 'Informacion');
@@ -43,7 +43,7 @@ try {
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    header('location:mensaje-de-envio.html');
+    header('/index.html');
 } catch (Exception $e) {
     echo "Error: {$mail->ErrorInfo}";
 }
